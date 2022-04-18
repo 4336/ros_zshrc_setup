@@ -31,6 +31,7 @@ alias cm="roscd
 cd ..
 catkin_make"
 
+# Work In Progress: roslocal-multi fix
 roslocal
 
 alias gitup="git pull
