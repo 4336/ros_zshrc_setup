@@ -32,3 +32,8 @@ cd ..
 catkin_make"
 
 roslocal
+
+alias gitup="git pull
+git add .
+git commit -m \"jun\"
+git push"
