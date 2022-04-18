@@ -1,1 +1,1 @@
-source /home/jun/pharos_tele/devel/setup.zsh
+source /home/jun/pharos_ws/devel/setup.zsh
