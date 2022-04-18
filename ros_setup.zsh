@@ -1,15 +1,15 @@
 # Yongjun's ros zsh setup
 
 alias setup_pharos="sed -i '/devel\/setup.zsh/d' $ROS_ZSHRC_PATH/ros_ws.zsh
-echo source \$HOME/pharos_ws/devel/setup.zsh >> $ROS_ZSHRC_PATH/ros_ws.zsh
+echo source \\\$HOME/pharos_ws/devel/setup.zsh >> $ROS_ZSHRC_PATH/ros_ws.zsh
 source $ROS_ZSHRC_PATH/ros_ws.zsh"
 
 alias setup_tele="sed -i '/devel\/setup.zsh/d' $ROS_ZSHRC_PATH/ros_ws.zsh
-echo source \$HOME/pharos_tele/devel/setup.zsh >> $ROS_ZSHRC_PATH/ros_ws.zsh
+echo source \\\$HOME/pharos_tele/devel/setup.zsh >> $ROS_ZSHRC_PATH/ros_ws.zsh
 source $ROS_ZSHRC_PATH/ros_ws.zsh"
 
 alias setup_mobile="sed -i '/devel\/setup.zsh/d' $ROS_ZSHRC_PATH/ros_ws.zsh
-echo source \$HOME/mobile_ws/devel/setup.zsh >> $ROS_ZSHRC_PATH/ros_ws.zsh
+echo source \\\$HOME/mobile_ws/devel/setup.zsh >> $ROS_ZSHRC_PATH/ros_ws.zsh
 source $ROS_ZSHRC_PATH/ros_ws.zsh"
 
 source $ROS_ZSHRC_PATH/ros_ws.zsh
