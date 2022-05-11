@@ -27,14 +27,7 @@ source $ROS_ZSHRC_PATH/ros_refresh.zsh"
 # ROS slave mode
 export ROS_MASTER_IP=$ROS_REMOTE_IP
 
-alias cm="roscd
-cd ..
-catkin_make"
-
 # Work In Progress: roslocal-multi fix
 roslocal
 
-alias gitup="git pull
-git add .
-git commit -m \"jun\"
-git push"
+source $ROS_ZSHRC_PATH/alias.zsh
