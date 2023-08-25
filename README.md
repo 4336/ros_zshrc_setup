@@ -2,7 +2,7 @@
 
 ### setup zsh
 
-sudo apt install zsh -y
+sudo apt install zsh curl -y
 
 which zsh
 
