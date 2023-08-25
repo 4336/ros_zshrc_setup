@@ -1,1 +1,1 @@
-source $HOME/mobile_ws/devel/setup.zsh
+source $HOME/pharos_ws/devel/setup.zsh
