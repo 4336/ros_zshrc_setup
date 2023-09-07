@@ -20,7 +20,7 @@ source ~/.zshrc
 
 echo "# host name  
 export ROS_HOST_IP=localhost  
-export ROS_REMOTE_IP=192.168.2.200" >> $HOME/.$USER/ip.zsh
+export ROS_REMOTE_IP=192.168.1.200" >> $HOME/.$USER/ip.zsh
 
 echo "source \\$ROS_ZSHRC_PATH/ros_setup.zsh" >> ~/.zshrc
 
