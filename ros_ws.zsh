@@ -1,1 +1,1 @@
-source $HOME/mobile_ws/devel/setup.zsh
+source $HOME/Workspaces/jetson_ws/devel/setup.zsh
