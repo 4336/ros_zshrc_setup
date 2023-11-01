@@ -14,13 +14,13 @@ set_rosmode()
         # ros master mode
         local_ip=$(cat $ROS_ZSHRC_PATH/.local_ip)
         export ROS_IP=$local_ip
-        export ROS_MASTER_URI=http://$local_ip:11311
+        export ROS_MASTER_URI=http://localhost:11311
         export ROS_HOSTNAME=$local_ip
     elif [ "$ros_mode" -eq 2 ]; then
         # ros slave mode
         target_ip=$(cat $ROS_ZSHRC_PATH/.target_ip)
         local_ip=$(cat $ROS_ZSHRC_PATH/.local_ip)
-        export ROS_IP=$target_ip
+        export ROS_IP=$local_ip
         export ROS_MASTER_URI=http://$target_ip:11311
         export ROS_HOSTNAME=$local_ip
     else
