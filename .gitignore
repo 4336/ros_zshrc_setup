@@ -1,4 +1,1 @@
-ip.zsh
-.ros_mode
-.local_ip
-.target_ip
+.*
