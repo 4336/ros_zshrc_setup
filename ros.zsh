@@ -74,8 +74,6 @@ set_rosip() #1 host ip; #2 client ip
 
 rosws()
 {
-    source /opt/ros/noetic/setup.zsh
-
     dir=$(cat $USER_ZSH_PATH/.ros_ws)
     if [ -z "$dir" ]; then
         echo "ROS workspace has not been loaded."
