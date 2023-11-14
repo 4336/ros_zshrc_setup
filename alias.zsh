@@ -92,11 +92,28 @@ export CARLA_ROOT=~/CARLA/carla
 alias carla_cd="cd $CARLA_ROOT"
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/agents:${CARLA_ROOT}/PythonAPI/carla
 
-alias carla_reinstall="pip uninstall carla -y
-pip install $CARLA_ROOT/PythonAPI/carla/dist/carla-0.9.14-cp38-cp38-linux_x86_64.whl"
+carla_reinstall(){
+    if [ $# -eq 0 ]; then
+        echo "no version info"
+    elif [ $# -eq 1 ]; then
+        pip uninstall carla -y
+        pip install $CARLA_ROOT/PythonAPI/carla/dist/carla-$1-cp38-cp38-linux_x86_64.whl
+    else
+        echo "too many args"
+    fi
+}
 
-
-alias darla="docker run --rm --name carla --privileged --gpus all --net=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:0.9.14 /bin/bash ./CarlaUE4.sh -RenderOffScreen &"
+darla(){
+    if [ $# -eq 0 ]; then
+        echo "no version info"
+    elif [ $# -eq 1 ]; then
+        docker run --rm --name carla --privileged --gpus all --net=host \
+            -v /tmp/.X11-unix:/tmp/.X11-unix:rw carlasim/carla:$1 \
+            /bin/bash ./CarlaUE4.sh -RenderOffScreen &
+    else
+        echo "too many args"
+    fi
+}
 alias stop_carla="docker stop carla &"
 
 
@@ -109,3 +126,6 @@ fix_kazam(){
 
 alias sleep="sudo systemctl hibernate"
 
+nohup_wget(){
+    nohup wget "$1" -O "$2" -c > /dev/null 2>&1 &
+}

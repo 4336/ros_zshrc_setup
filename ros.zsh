@@ -85,5 +85,6 @@ rosws()
 set_rosws() #1 DIR to workspace
 {
     echo $1 > $USER_ZSH_PATH/.ros_ws
+    rosws
 }
 
