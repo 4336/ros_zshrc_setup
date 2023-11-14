@@ -81,8 +81,8 @@ alias is_sim="rosparam get /use_sim_time"
 
 alias carla="/opt/carla-simulator/./CarlaUE4.sh -RenderOffScreen"
 
-export PATH="/usr/local/cuda-12.0/bin:$PATH"
-export LD_LIBRARY_PATH="/usr/local/cuda-12.0/lib64:$LD_LIBRARY_PATH"
+export PATH="/usr/local/cuda/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
 export PKG_CONFIG_PATH
 
@@ -118,6 +118,9 @@ alias stop_carla="docker stop carla &"
 
 
 ### ETC ###
+
+alias ez="subl ~/.zshrc"
+
 alias GD="google-drive-ocamlfuse ~/Documents/GoogleDrive"
 
 fix_kazam(){
@@ -129,3 +132,4 @@ alias sleep="sudo systemctl hibernate"
 nohup_wget(){
     nohup wget "$1" -O "$2" -c > /dev/null 2>&1 &
 }
+
