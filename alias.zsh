@@ -96,6 +96,10 @@ carla_reinstall(){
     if [ $# -eq 0 ]; then
         echo "no version info"
     elif [ $# -eq 1 ]; then
+        if [ ! -e $CARLA_ROOT/PythonAPI/carla/dist/carla-$1-cp38-cp38-linux_x86_64.whl ]; then
+            cd $CARLA_ROOT
+            make PythonAPI
+        fi
         pip uninstall carla -y
         pip install $CARLA_ROOT/PythonAPI/carla/dist/carla-$1-cp38-cp38-linux_x86_64.whl
     else
@@ -120,6 +124,7 @@ alias stop_carla="docker stop carla &"
 ### ETC ###
 
 alias ez="subl ~/.zshrc"
+alias sz="source ~/.zshrc"
 
 alias GD="google-drive-ocamlfuse ~/Documents/GoogleDrive"
 
