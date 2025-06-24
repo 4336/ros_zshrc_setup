@@ -82,6 +82,17 @@ rosws()
     fi
 }
 
+ros2ws()
+{
+    dir=$(cat $USER_ZSH_PATH/.ros2_ws)
+    if [ -z "$dir" ]; then
+        echo "ROS workspace has not been loaded."
+    else
+        source $dir/install/local_setup.zsh
+        source $dir/install/local_setup.zsh
+    fi
+}
+
 set_rosws() #1 DIR to workspace
 {
     echo $1 > $USER_ZSH_PATH/.ros_ws

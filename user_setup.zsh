@@ -9,5 +9,5 @@ source $USER_ZSH_PATH/alias.zsh
 
 
 set_rosmode # setup ros ip
-rosws # setup ros workspace
+ros2ws # setup ros workspace
 
