@@ -2,6 +2,7 @@
 
 ### NZXT ###
 # sudo pip3 install liquidctl
+alias liquid_env="source ~/Library/liquidctl/.venv/bin/activate"
 alias pauto="liquidctl --match Kraken set pump speed 20 30  30 50  35 80  40 100"
 alias pmax="liquidctl --match Kraken set pump speed 100"
 alias p53="watch -n 0.2 liquidctl --match Kraken status"

@@ -99,3 +99,10 @@ set_rosws() #1 DIR to workspace
     rosws
 }
 
+## ROS2
+
+alias roscd="cd $(cat $USER_ZSH_PATH/.ros2_ws)"
+
+alias rosrun="ros2 run"
+alias rostopic="ros2 topic"
+alias rosbag="ros2 bag"
